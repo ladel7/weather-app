@@ -1,10 +1,16 @@
 var apiKey = "eec790e544b831eb1307518e7e3d5c07";
 var apiUrlStart = "https://api.openweathermap.org/data/2.5/weather?";
 
-function formatDate(date) {
-  let dayIndex = date.getDay();
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
+function formatDate(timezone) {
+  let currentDate = new Date();
+  let currentTime = currentDate.getTime();
+  let offset = currentDate.getTimezoneOffset() * 60000;
+  let localDate = new Date(currentTime + offset + 1000 * timezone);
+  console.log(localDate);
+
+  let dayIndex = localDate.getDay();
+  let hour = localDate.getHours();
+  let minutes = localDate.getMinutes();
   let days = [
     "Sunday",
     "Monday",
@@ -14,9 +20,9 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let dayOfWeek = document.querySelector("li#date");
-  dayOfWeek.innerHTML = `Today: ${days[dayIndex]}`;
-  let timeOfDay = document.querySelector("li#time");
+  let dayOfWeek = document.querySelector("#date");
+  dayOfWeek.innerHTML = `${days[dayIndex]}`;
+  let timeOfDay = document.querySelector("#time");
 
   if (hour < 10) {
     hour = `0${hour}`;
@@ -24,15 +30,17 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  timeOfDay.innerHTML = `Time: ${hour}:${minutes}`;
+  timeOfDay.innerHTML = `${hour}:${minutes}`;
 }
 function showWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#precip").innerHTML =
     response.data.weather[0].description;
+  console.log(response);
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  formatDate(response.data.timezone);
 }
 function search(city) {
   let apiUrl = `${apiUrlStart}q=${city}&units=imperial&appid=${apiKey}`;
@@ -60,9 +68,6 @@ function getCurrentLocation() {
 //   let tempC = document.querySelector("#current-temp");
 //   tempC.innerHTML = "-8";
 // }
-
-let now = new Date();
-formatDate(now);
 
 search("New York");
 
