@@ -6,7 +6,6 @@ function formatDate(timezone) {
   let currentTime = currentDate.getTime();
   let offset = currentDate.getTimezoneOffset() * 60000;
   let localDate = new Date(currentTime + offset + 1000 * timezone);
-  console.log(localDate);
 
   let dayIndex = localDate.getDay();
   let hour = localDate.getHours();
@@ -36,10 +35,8 @@ function showWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#precip").innerHTML =
     response.data.weather[0].description;
-  console.log(response);
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  fahrenheit = response.data.main.temp;
+  document.querySelector("#current-temp").innerHTML = Math.round(fahrenheit);
   document
     .querySelector("#condition-icon")
     .setAttribute(
@@ -64,26 +61,34 @@ function getCurrentCoords(position) {
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(getCurrentCoords);
 }
-// function toFahrenheit(event) {
-//   event.preventDefault();
-//   let tempF = document.querySelector("#current-temp");
-//   tempF.innerHTML = "18";
-// }
-// function toCelsius(event) {
-//   event.preventDefault();
-//   let tempC = document.querySelector("#current-temp");
-//   tempC.innerHTML = "-8";
-// }
+function toFahrenheit(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let tempF = document.querySelector("#current-temp");
+  tempF.innerHTML = Math.round(fahrenheit);
+}
+function toCelsius(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+  let tempC = document.querySelector("#current-temp");
+  celsius = (fahrenheit - 32) * (5 / 9);
+  tempC.innerHTML = Math.round(celsius);
+}
+
+let fahrenheit = null;
+let celsius = null;
+
+let fahrenheitLink = document.querySelector("a#fahrenheit");
+let celsiusLink = document.querySelector("a#celsius");
+fahrenheitLink.addEventListener("click", toFahrenheit);
+celsiusLink.addEventListener("click", toCelsius);
 
 search("New York");
 
 let newSearch = document.querySelector("#search-submit");
 newSearch.addEventListener("click", changeCity);
-
-// let fahrenheit = document.querySelector("a#fahrenheit");
-// let celsius = document.querySelector("a#celsius");
-// fahrenheit.addEventListener("click", toFahrenheit);
-// celsius.addEventListener("click", toCelsius);
 
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);

@@ -29,9 +29,18 @@ h2 {
 
 a {
   text-decoration: none;
+  color: black;
 }
 a:hover {
-  text-decoration: underline;
+  color: black;
+}
+.active {
+  color: gray;
+  cursor: pointer;
+}
+.active:hover {
+  text-decoration: none;
+  color: black;
 }
 ul {
   padding-left: 0;
@@ -115,4 +124,11 @@ img {
 }
 .condition-icon {
   width: 100px;
+}
+.git-link {
+  color: blue;
+}
+.git-link:hover {
+  text-decoration: underline;
+  color: lightblue;
 }
