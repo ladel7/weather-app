@@ -25,102 +25,106 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container weather-app">
-      <div class="row">
-        <div class="col-10 locate">
-          <form>
-            <input
-              type="search"
-              placeholder="Change city"
-              class="search-bar"
-              id="search-bar"
-            />
-            <input
-              type="submit"
-              value="Search"
-              class="search-submit"
-              id="search-submit"
-            />
-          </form>
-        </div>
-        <div class="col-1 locate">
-          <button class="current-button" id="current-button">Current</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h1>City Name</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4 date-time">
-          <ul>
-            <li id="date">Date: Tuesday</li>
-            <li id="time">Time: 13:54</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div class="precip" id="precip">Precipitation</div>
-          <h2>
-            <span id="current-temp">18</span>
-            <span class="units"
-              ><a href="#" id="fahrenheit">°F</a>
-              |
-              <a href="#" id="celsius">°C</a></span
-            >
-          </h2>
-        </div>
-        <div class="col-6">
-          <img src="images/snowing.jpg" alt="snowing" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col forecast">
-          Today
-          <div class="forecast-details">
-            <div class="col fore-pic">🌥</div>
-            <div class="col fore-temp">20°/9°</div>
-          </div>
-        </div>
-        <div class="col forecast">
-          Tomorrow
-          <div class="forecast-details">
-            <div class="col fore-pic">🌥</div>
-            <div class="col fore-temp">20°/9°</div>
-          </div>
-        </div>
-        <div class="col forecast">
-          Weds
-          <div class="forecast-details">
-            <div class="col fore-pic">🌥</div>
-            <div class="col fore-temp">20°/9°</div>
-          </div>
-        </div>
-        <div class="col forecast">
-          Thurs
-          <div class="forecast-details">
-            <div class="col fore-pic">🌥</div>
-            <div class="col fore-temp">20°/9°</div>
-          </div>
-        </div>
-        <div class="col forecast">
-          Fri
-          <div class="forecast-details">
-            <div class="col fore-pic">🌥</div>
-            <div class="col fore-temp">20°/9°</div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
-      <span class="github-link">
-        <a href="https://github.com/ladel7/weather-app.git" target="_blank"
-          >Open-source code</a
-        >
-        by Lucy Adelson
-      </span>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-10 locate">
+              <form>
+                <input
+                  type="search"
+                  placeholder="Change city"
+                  class="search-bar"
+                  id="search-bar"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  class="search-submit"
+                  id="search-submit"
+                />
+              </form>
+            </div>
+            <div class="col-1 locate">
+              <button class="current-button" id="current-button">
+                Current
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h1>City Name</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 date-time">
+              <ul>
+                <li id="date">Date: Tuesday</li>
+                <li id="time">Time: 13:54</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="precip" id="precip">Precipitation</div>
+              <h2>
+                <span id="current-temp">18</span>
+                <span class="units"
+                  ><a href="#" id="fahrenheit">°F</a>
+                  |
+                  <a href="#" id="celsius">°C</a></span
+                >
+              </h2>
+            </div>
+            <div class="col-6">
+              <img src="images/snowing.jpg" alt="snowing" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col forecast">
+              Today
+              <div class="forecast-details">
+                <div class="col fore-pic">🌥</div>
+                <div class="col fore-temp">20°/9°</div>
+              </div>
+            </div>
+            <div class="col forecast">
+              Tomorrow
+              <div class="forecast-details">
+                <div class="col fore-pic">🌥</div>
+                <div class="col fore-temp">20°/9°</div>
+              </div>
+            </div>
+            <div class="col forecast">
+              Weds
+              <div class="forecast-details">
+                <div class="col fore-pic">🌥</div>
+                <div class="col fore-temp">20°/9°</div>
+              </div>
+            </div>
+            <div class="col forecast">
+              Thurs
+              <div class="forecast-details">
+                <div class="col fore-pic">🌥</div>
+                <div class="col fore-temp">20°/9°</div>
+              </div>
+            </div>
+            <div class="col forecast">
+              Fri
+              <div class="forecast-details">
+                <div class="col fore-pic">🌥</div>
+                <div class="col fore-temp">20°/9°</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <small>
+          <a href="https://github.com/ladel7/weather-app.git" target="_blank"
+            >Open-source code</a
+          >
+          by Lucy Adelson
+        </small>
+      </div>
     </div>
     <script src="src/script.js"></script>
   </body>

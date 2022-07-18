@@ -1,11 +1,14 @@
 /*styling for headers
 add picture section*/
 
+.weather-app-wrapper {
+  margin: 30px auto;
+  max-width: 650px;
+}
 .weather-app {
   border: solid;
   border-radius: 4px;
-  width: 650px;
-  margin: 10px auto;
+  padding: 20px;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -109,10 +112,4 @@ img {
   text-align: center;
   font-size: 20px;
   font-weight: 100;
-}
-
-.github-link {
-  display: block;
-  margin: -10px auto;
-  padding-left: 232px;
 }
