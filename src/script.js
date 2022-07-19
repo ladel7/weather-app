@@ -66,15 +66,15 @@ function getCurrentLocation() {
 }
 function toFahrenheit(event) {
   event.preventDefault();
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   let tempF = document.querySelector("#current-temp");
   tempF.innerHTML = Math.round(fahrenheit);
 }
 function toCelsius(event) {
   event.preventDefault();
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let tempC = document.querySelector("#current-temp");
   celsius = (fahrenheit - 32) * (5 / 9);
   tempC.innerHTML = Math.round(celsius);
@@ -91,10 +91,10 @@ let celsiusLink = document.querySelector("a#celsius");
 fahrenheitLink.addEventListener("click", toFahrenheit);
 celsiusLink.addEventListener("click", toCelsius);
 
-search("New York");
-
 let newSearch = document.querySelector("#search-submit");
 newSearch.addEventListener("click", changeCity);
 
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+search("New York");
