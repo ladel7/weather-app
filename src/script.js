@@ -28,6 +28,27 @@ function formatDate(timezone) {
   }
   timeOfDay.innerHTML = `${hour}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tues", "Wed", "Thurs"];
+  days.forEach(function (day) {
+    forecastHTML += `<div class="col forecast">
+      ${day}
+      <div class="forecast-details">
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt=""
+          class="fore-pic"
+        />
+        <div class="col fore-temp">20°/9°</div>
+      </div>
+    </div>`;
+  });
+  forecastHTML += `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function showWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = Math.round(
@@ -98,3 +119,4 @@ let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search("New York");
+displayForecast();
