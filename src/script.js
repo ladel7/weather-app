@@ -1,6 +1,3 @@
-var apiKey = "eec790e544b831eb1307518e7e3d5c07";
-var apiUrlStart = "https://api.openweathermap.org/data/2.5/weather?";
-
 function formatDate(timezone) {
   let currentDate = new Date();
   let currentTime = currentDate.getTime();
@@ -33,6 +30,12 @@ function formatDate(timezone) {
 }
 function showWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.main.humidity
+  );
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#precip").innerHTML =
     response.data.weather[0].description;
   fahrenheit = response.data.main.temp;
@@ -76,6 +79,9 @@ function toCelsius(event) {
   celsius = (fahrenheit - 32) * (5 / 9);
   tempC.innerHTML = Math.round(celsius);
 }
+
+var apiKey = "eec790e544b831eb1307518e7e3d5c07";
+var apiUrlStart = "https://api.openweathermap.org/data/2.5/weather?";
 
 let fahrenheit = null;
 let celsius = null;

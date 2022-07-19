@@ -56,13 +56,17 @@ img {
 .units {
   font-size: 20px;
   position: relative;
-  top: -34px;
+  top: -46px;
 }
-.date-time {
-  font-size: 18px;
+.date-hum-wind {
+  font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   padding-bottom: 0;
+}
+.humidity,
+.wind {
+  font-size: 15px;
 }
 .precip {
   font-family: "Indie Flower", cursive;

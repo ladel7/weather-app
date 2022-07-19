@@ -57,10 +57,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-4 date-time">
+            <div class="col-4 date-hum-wind">
               <ul>
-                <li id="date">Day</li>
-                <li id="time">Time</li>
+                <li><span id="date">Day</span>, <span id="time">Time</span></li>
+                <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+                <li class="wind">Wind: <span id="wind"></span>mph</li>
               </ul>
             </div>
           </div>
@@ -74,8 +75,8 @@
                   id="condition-icon"
                   class="condition-icon"
                 />
-                <span id="current-temp">00</span>
-                <span class="units"
+                <span id="current-temp">00</span
+                ><span class="units"
                   ><a href="#" id="fahrenheit" class="active">°F</a>
                   |
                   <a href="#" id="celsius">°C</a></span
