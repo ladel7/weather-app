@@ -22,32 +22,27 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Document</title>
+    <title>Weather</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="row">
-            <div class="col-10 locate">
-              <form>
+            <div class="col locate">
+              <form class="form-search">
                 <input
                   type="search"
                   placeholder="Change city"
                   class="search-bar"
                   id="search-bar"
                 />
-                <input
-                  type="submit"
-                  value="Search"
-                  class="search-submit"
-                  id="search-submit"
-                />
+                <button type="submit" class="search-submit" id="search-submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
               </form>
-            </div>
-            <div class="col-1 locate">
               <button class="current-button" id="current-button">
-                Current
+                <i class="fa-solid fa-location-dot"></i>
               </button>
             </div>
           </div>
@@ -83,9 +78,6 @@
                 >
               </h2>
             </div>
-            <!-- <div class="col-6">
-              <img src="images/snowing.jpg" alt="snowing" />
-            </div> -->
           </div>
           <div class="forecast" id="forecast"></div>
         </div>
