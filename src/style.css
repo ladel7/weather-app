@@ -85,12 +85,12 @@ img {
 }
 .search-submit {
   color: #9f48cb;
-  background: none;
+  background: #d7a3ea;
   border: 2px solid #9f48cb;
 }
 .current-button {
   color: #df6c02;
-  background: none;
+  background: #f4b097;
   border: 2px solid #df6c02;
   display: inline;
 }
@@ -98,7 +98,7 @@ img {
 .current-button {
   border-radius: 4px;
   transition: all 200ms ease-in-out;
-  width: 50px;
+  width: 30px;
   height: 30px;
 }
 .search-submit:hover,
