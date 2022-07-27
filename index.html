@@ -52,17 +52,20 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-4 date-hum-wind">
+            <div class="col-6 date-precip">
               <ul>
                 <li><span id="date">Day</span>, <span id="time">Time</span></li>
-                <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+                <li class="humidity">
+                  <br />Humidity: <span id="humidity"></span>%
+                </li>
                 <li class="wind">Wind: <span id="wind"></span>mph</li>
+                <li class="condition">
+                  Conditions:
+                  <span class="precip" id="precip">Precipitation</span>
+                </li>
               </ul>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="precip" id="precip">Precipitation</div>
+            <div class="col-6">
               <h2>
                 <img
                   src="#"
@@ -79,6 +82,11 @@
               </h2>
             </div>
           </div>
+          <!-- <div class="row">
+            <div class="col-12">
+              <div class="precip" id="precip">Precipitation</div>
+            </div>
+          </div> -->
           <div class="forecast" id="forecast"></div>
         </div>
         <small>

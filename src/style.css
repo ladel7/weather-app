@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/wood-table.jpg");
+  background-image: url("images/abstract.jpg");
 }
 .weather-app-wrapper {
   margin: 30px auto;
@@ -10,18 +10,19 @@ body {
   border-radius: 4px;
   padding: 20px;
   font-family: "Quicksand", sans-serif;
-  background-image: url("images/paper.jpg");
+  background: #f9d6ee;
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 56px;
   line-height: 50px;
   font-weight: 600;
-  padding: 20px 0 50px;
+  padding: 40px 0 40px;
+  text-align: center;
 }
 
 h2 {
-  padding-top: 90px;
+  padding-top: 10px;
   padding-bottom: 0;
   font-size: 90px;
   line-height: 10px;
@@ -59,21 +60,18 @@ img {
   position: relative;
   top: -46px;
 }
-.date-hum-wind {
+.date-precip {
   font-size: 20px;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 500;
   padding-bottom: 0;
 }
 .humidity,
-.wind {
+.wind,
+.precip,
+.condition {
   font-size: 15px;
-}
-.precip {
-  font-family: "Indie Flower", cursive;
-  font-size: 30px;
-  line-height: 1px;
-  padding-top: 10px;
+  font-family: "Share Tech Mono", monospace;
 }
 .form-search {
   display: inline;
@@ -81,24 +79,27 @@ img {
 .search-bar {
   width: 350px;
   font-family: "Share Tech Mono", monospace;
-  border: 2px solid gray;
+  border: 2px solid #d8a9f2;
   border-radius: 4px;
+  height: 35px;
 }
 .search-submit {
-  color: blue;
-  background: lightblue;
-  border: 2px solid blue;
+  color: #9f48cb;
+  background: none;
+  border: 2px solid #9f48cb;
 }
 .current-button {
-  color: red;
-  background: pink;
-  border: 2px solid red;
+  color: #df6c02;
+  background: none;
+  border: 2px solid #df6c02;
   display: inline;
 }
 .search-submit,
 .current-button {
   border-radius: 4px;
   transition: all 200ms ease-in-out;
+  width: 50px;
+  height: 30px;
 }
 .search-submit:hover,
 .current-button:hover {
@@ -107,7 +108,7 @@ img {
 }
 
 .forecast {
-  padding: 50px 10px 20px 10px;
+  padding: 30px 10px 20px 10px;
   text-align: center;
   font-weight: 500;
 }
@@ -127,6 +128,9 @@ img {
 }
 .condition-icon {
   width: 100px;
+  position: relative;
+  bottom: 8px;
+  left: 30px;
 }
 .git-link {
   color: blue;
