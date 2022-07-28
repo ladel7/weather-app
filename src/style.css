@@ -128,9 +128,9 @@ img {
   left: 30px;
 }
 .git-link {
-  color: blue;
+  color: #2d5ab5;
 }
 .git-link:hover {
   text-decoration: underline;
-  color: lightblue;
+  color: #7891db;
 }
