@@ -108,15 +108,9 @@ img {
 }
 
 .forecast {
-  padding: 30px 10px 0px 10px;
+  padding: 10px 10px 0px 10px;
   text-align: center;
-  font-weight: 500;
-}
-.forecast-details {
-  border: solid;
-  border-radius: 50px;
-  border-color: #7891db;
-  padding: 20px;
+  font-weight: 400;
 }
 .fore-pic {
   width: 60px;

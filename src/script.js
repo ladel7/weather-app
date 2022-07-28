@@ -43,13 +43,13 @@ function displayForecast(response) {
     if (index < 4) {
       forecastHTML += `<div class="col-3 forecast">
       ${formatForecastDay(day.dt)}
-      <div class="forecast-details">
+      <div>
         <img
           src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
           alt=""
           class="fore-pic"
         />
-        <div class="col fore-temp">${Math.round(day.temp.max)}°/${Math.round(
+        <div class="fore-temp">${Math.round(day.temp.max)}°/${Math.round(
         day.temp.min
       )}°</div>
       </div>
